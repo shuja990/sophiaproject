@@ -3,6 +3,8 @@ import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import CronJob from "cron";
+import path from 'path';
+const __dirname = path.resolve();
 dotenv.config();
 import { initializeApp, applicationDefault, cert } from "firebase-admin/app";
 import { getFirestore, Timestamp, FieldValue } from "firebase-admin/firestore";
