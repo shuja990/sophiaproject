@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 let a = "V";
-const job = new CronJob.CronJob("00 00 00 * * *", async function () {
+const job = new CronJob.CronJob("10 * * * * *", async function () {
   const docRef = db.collection("data").doc("d");
   console.log("dd");
   await docRef.set({
