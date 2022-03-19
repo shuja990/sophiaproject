@@ -10,7 +10,7 @@ const Home = ({theme}) => {
   useEffect(() => {
     let date = new Date();
     let day = date.getDate().toString();
-    let month = date.getMonth().toString();
+    let month = ((date.getMonth())+1).toString();
     let year = date.getFullYear().toString();
     let collection = document.getElementsByTagName("div")
     let collections = document.getElementsByTagName("html")
