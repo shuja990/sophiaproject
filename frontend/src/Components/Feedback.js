@@ -1,11 +1,11 @@
 import React from "react";
-import { Form, Container, Button } from "react-bootstrap";
+import { Form, Container, Alert, Button } from "react-bootstrap";
 import { useForm, ValidationError } from "@formspree/react";
 
 const Feedback = () => {
   const [state, handleSubmit] = useForm("xbjwkqdk");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <Alert variant={"success"}>Message sent Successfully</Alert>;
   }
   return (
     <Container>
