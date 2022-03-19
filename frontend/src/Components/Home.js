@@ -72,7 +72,7 @@ const Home = ({theme}) => {
           <span className="sr-only"></span>
         </Spinner>
       ) : (
-        <Container>
+        <Container style={{width:"100%",background:`${theme==="dark"? "#243447":"white"}`}}>
           <Row>
             <h1 style={{ textAlign: "center" }}>Wave</h1>
           </Row>

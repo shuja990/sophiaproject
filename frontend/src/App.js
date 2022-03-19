@@ -11,6 +11,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics,logEvent  } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { useState } from "react";
+import Footer from "./Components/Footer";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/feedback" element={<Feedback theme={theme} />} />
         <Route exact path="/about" element={<About theme={theme} />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

@@ -7,10 +7,13 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const Navigation = ({ theme,setTheme }) => {
+const Navigation = ({ theme, setTheme }) => {
   return (
     <Navbar
-      bg={theme}
+      style={{
+        width: "100%",
+        background: `${theme === "dark" ? "#243447" : "white"}`,
+      }}
       expand={false}
       variant={theme}
       collapseOnSelect={true}
@@ -43,12 +46,30 @@ const Navigation = ({ theme,setTheme }) => {
                 </Link>
               </Nav.Link>
               <NavDropdown title="Theme" id="basic-nav-dropdown">
-              <NavDropdown.Item style={{color: `${theme === "dark"} ? "white" : "black"`}} onClick={()=>setTheme('dark')}>Dark</NavDropdown.Item>
-                <NavDropdown.Item style={{color: `${theme === "dark"} ? "white" : "black"`}} onClick={()=>setTheme('light')}>Light</NavDropdown.Item>
+                <NavDropdown.Item
+                  style={{ color: `${theme === "dark"} ? "white" : "black"` }}
+                  onClick={() => setTheme("dark")}
+                >
+                  Dark
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  style={{ color: `${theme === "dark"} ? "white" : "black"` }}
+                  onClick={() => setTheme("light")}
+                >
+                  Light
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Language" id="basic-nav-dropdown">
-                <NavDropdown.Item style={{color: `${theme === "dark"} ? "white" : "black"`}}>English</NavDropdown.Item>
-                <NavDropdown.Item style={{color: `${theme === "dark"} ? "white" : "black"`}}>Spanish</NavDropdown.Item>
+                <NavDropdown.Item
+                  style={{ color: `${theme === "dark"} ? "white" : "black"` }}
+                >
+                  English
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  style={{ color: `${theme === "dark"} ? "white" : "black"` }}
+                >
+                  Spanish
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Offcanvas.Body>
